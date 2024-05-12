@@ -11,3 +11,5 @@ This virtual machine template must be builded using Packer.
 - ``cd packer-ubuntuserver24_04``
 - ``packer init vmware-iso-ubuntuserver24_04.pkr.hcl``
 - ``packer build vmware-iso-ubuntuserver24_04.pkr.hcl``
+
+This template creates an **ubuntu** user with the password **MotDePasse**.
