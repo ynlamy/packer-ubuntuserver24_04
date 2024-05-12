@@ -1,0 +1,31 @@
+#cloud-config
+autoinstall:
+  version: 1
+  keyboard:
+    layout: fr
+    variant: latin9
+  locale: fr_FR.UTF-8
+  timezone: Europe/Paris
+  network:
+    version: 2
+    ethernets:
+      ens33:
+        dhcp4: true
+  identity:
+    hostname: ubuntu-server
+    password: $6$CD480CfTpjbwtUJw$FEfHQiF341m7S4O08y.FDpAYuNxArl29f6vJJZPkrUzE6ffywxHNuZjTAvGaPnlFSQ2IjEYWG4DLmnudi2Cda1
+    realname: ubuntu User
+    username: ubuntu
+  ssh:
+    install-server: true
+    allow-pw: true
+  codecs:
+    install: false
+  drivers:
+    install: false
+  packages:
+    - open-vm-tools
+  storage:
+    layout:
+      name: lvm
+  updates: security
