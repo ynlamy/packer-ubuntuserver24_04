@@ -12,4 +12,4 @@ echo "Installing packages..."
 apt -qq -y install locate net-tools unzip &> /dev/null
 
 echo "Cleaning apt cache..."
-apt -qq -y clean &>/dev/null
+apt -qq -y clean &> /dev/null
