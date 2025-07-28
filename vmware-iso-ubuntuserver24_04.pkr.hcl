@@ -17,13 +17,13 @@ packer {
 variable "iso" {
   type        = string
   description = "A URL to the ISO file"
-  default     = "https://releases.ubuntu.com/noble/ubuntu-24.04.1-live-server-amd64.iso"
+  default     = "https://releases.ubuntu.com/noble/ubuntu-24.04.2-live-server-amd64.iso"
 }
 
 variable "checksum" {
   type        = string
   description = "The checksum for the ISO file"
-  default     = "sha256:e240e4b801f7bb68c20d1356b60968ad0c33a41d00d828e74ceb3364a0317be9"
+  default     = "sha256:d6dab0c3a657988501b4bd76f1297c053df710e06e0c3aece60dead24f270b4d"
 }
 
 variable "headless" {
@@ -59,7 +59,7 @@ source "vmware-iso" "ubuntuserver24_04" {
 
   // Driver configuration
   cleanup_remote_cache = false
-  
+
   // Hardware configuration
   vm_name           = var.name
   vmdk_name         = var.name
@@ -101,7 +101,7 @@ source "vmware-iso" "ubuntuserver24_04" {
 
   // Export configuration
   format          = "vmx"
-  skip_compaction = false  
+  skip_compaction = false
 }
 
 build {
